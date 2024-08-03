@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/raw_css.css">
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.css">
+    <script src="../js/jquery.js"></script>
+    <title>New Crime Record</title>
+</head>
+<body>
+
+
+    <header id="header" style="background:rgb(40 55 70)" class=" h-20">
+        <nav class="flex justify-between w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative">
+            <div class="left-nav relative">
+                <div class="logo relative">
+                    <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-500"> Index</span></p>
+                    <div class="blood absolute w-[15px] h-[15px] top-[30px] opacity-[.8] left-0 rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+                </div>
+                <div class="blood z-10 absolute w-[25px] h-[25px] top-[40px]  left-[30%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[15px] h-[15px] top-[70px]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[20px] h-[20px] top-[110px] opacity-[.6]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[30px] h-[30px] top-[70px]  opacity-[.5] left-[40%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[10px] h-[10px] top-[70px] opacity-]  left-[70%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+
+            </div>
+            <div class="blood absolute w-[25px] h-[25px] top-[30px] opacity-[.8] left-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[10px] opacity-[.8] right-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[20px] opacity-[.8] right-[20%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+
+            <div class="right-nav">
+            
+                <div class="nav-menus *:ml-4 *:cursor-pointer flex items-center">
+                    <a href="form.html">
+                        <button class="bg-slate-600 flex  min-w-[100px] shadow px-6 h-[40px] py-2 rounded  text-white font-medium justify-center items-center"> <i class="fas fa-notes-medical"></i> <span class="hidden pl-2 sm:inline"> Add Record</span></button>
+                
+                    </a>
+                    <p class="font-bold text-xl text-white"><span class="text-red-500 text-2xl">১</span> দফা</p>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="w-full h-svh flex items-center justify-center hidden">
+        <div>
+            <p class="font-semibold text-green-600 text-center">Submitted Successfully !</p>
+            <a href="#">
+                <button class="bg-white py-2 px-2 rounded-md w-full mt-3 hover:text-white hover:bg-slate-500">See all complaints</button>
+            </a>
+
+            
+        </div>
+        
+    </div>
+
+    <div class="w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative   my-[2em]">
+
+        <button class="bg-slate-600 px-6 py-2 rounded text-white font-medium w-[150px]" onclick="history.back()">
+            <i class="fas fa-arrow-left"></i> Back
+        </button>
+    </div>
+
+    <div class="container w-[90%] max-w-[1600px] m-auto mt-[2em] flex justify-center items-center ">
+
+        
+        <div class="w-full">
+
+                
+           
+            <div class=" w-full  p-5 rounded-[8px] bg-[#353a40]   shadow-[#000]   m-auto">
+                <h1 class="text-xl text-[white] font-medium text-center">New Crime Record</h1>
+            </div>
+
+            <div class="options  flex justify-center items-center w-full mt-8  rounded-[8px] shadow-[#000000]  m-auto ">
+                
+                <div class="w-full">
+                    <form method="post">
+          
+                        <div class="input flex max-[650px]:block items-center justify-between *:block gap-3">
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Criminal Name <span class="text-red-400">*</span></label>
+                                <input required type="text" placeholder="Criminal name" class=" outline-none border  h-[46px] rounded-[4px] p-2 w-full">
+                            </div>
+
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Crime Location & Time<span class="text-red-400">*</span></label>
+                                <input required type="text" placeholder="Crime location" class=" outline-none border h-[46px] rounded-[4px] p-2 w-full">
+                            </div>
+                            
+                        </div>
+
+                        <div class="input flex max-[650px]:block justify-between items-center w-full gap-3">
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Criminal's Image <span class="text-red-400">*</span></label>
+                                <input required type="file" name="image" accept="file_extension|.jpg,.png,.jpeg" class="text-[#353a40] h-[46px] border p-2 rounded-[4px] w-full bg-white" placeholder="Full image of the vehicle">
+                                <div id="image_preview1"></div>
+                            </div>
+
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Criminal's - 1</label>
+                                <input type="file" name="image" accept="file_extension|.jpg,.png,.jpeg" class="text-[#353a40] h-[46px] p-2 border  rounded-[4px] w-full bg-white">
+                                <div id="image_preview2"></div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="input w-full max-[650px]:block flex justify-between gap-3 items-center">
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Video</label>
+                                <input type="file" name="video" accept="video/mp4,video/mkv, video/x-m4v,video/*" class="text-[#353a40] p-2 h-[46px] border rounded-[4px] w-full bg-white">
+                            </div>
+
+                            <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
+                                <label for="" class=" font-medium block mb-2">Video - 2</label>
+                                <input type="file" name="video" accept="video/mp4,video/mkv, video/x-m4v,video/*" class="text-[#353a40] p-2 h-[46px] border rounded-[4px] w-full bg-white">
+                            </div>
+                            
+                        </div>
+
+                        <div class="input w-full">
+                            <label for="" class=" font-medium block mb-2">Social Links <span class="text-red-400">*</span></label>
+                            <textarea name="social_links" id="social_links" id="" cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter your complaint note"></textarea>
+                        </div>
+                        <div class="input w-full">
+                            <label for="" class=" font-medium block mb-2">Crime Details <span class="text-red-400">*</span></label>
+                            <textarea required name="" id="crime_details" cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter crime details"></textarea>
+                        </div>
+
+                        <button type="submit" onsubmit="document.getElementById('submit-text').innerHTML='Submitting ...';" class="submit w-full bg-[#689095] h-[40px] my-[16px] rounded-[4px] text-white font-medium">
+                            <i class="fas fa-paper-plane"></i>
+                            <span id="submit-text">Submit</span>
+                        </button>
+
+                    </form>
+                </div>
+ 
+            </div>
+        </div>
+    </div>  
+
+    <footer class="w-90% m-auto my-[40px]">
+        <p class=" text-center font-semibold text-xs opacity-7">@Copyright all rights reserved to students of bangladesh - 2024</p>
+    </footer>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.js",
+                "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/42.0.2/"
+            }
+        }
+    </script>
+
+    <script type="module">
+        import {
+            ClassicEditor,
+            Essentials,
+            Paragraph,
+            Bold,
+            Italic,
+            Font
+        } from 'ckeditor5';
+
+        ClassicEditor
+            .create( document.querySelector( '#social_links' ), {
+                plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+                toolbar: [
+                    'undo', 'redo', '|', 'bold', 'italic', '|',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+                ]
+            } )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
+
+        ClassicEditor
+            .create( document.querySelector( '#crime_details' ), {
+                plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+                toolbar: [
+                    'undo', 'redo', '|', 'bold', 'italic', '|',
+                    'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+                ]
+            } )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( error => {
+                console.error( error );
+            } );
+    </script>
+    
+</body>
+</html>

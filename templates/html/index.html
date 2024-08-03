@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="stylesheet" href="../css/raw_css.css">
+    <title>National Criminals  Index</title>
+</head>
+<body>
+
+    <header id="header" style="background:rgb(40 55 70)" class=" h-20">
+        <nav class="flex justify-between w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative">
+            <div class="left-nav relative">
+                <div class="logo relative">
+                    <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-500"> Index</span></p>
+                    <div class="blood absolute w-[15px] h-[15px] top-[30px] opacity-[.8] left-0 rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+                </div>
+                <div class="blood z-10 absolute w-[25px] h-[25px] top-[40px]  left-[30%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[15px] h-[15px] top-[70px]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[20px] h-[20px] top-[110px] opacity-[.6]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[30px] h-[30px] top-[70px]  opacity-[.5] left-[40%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[10px] h-[10px] top-[70px] opacity-]  left-[70%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+
+            </div>
+            <div class="blood absolute w-[25px] h-[25px] top-[30px] opacity-[.8] left-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[10px] opacity-[.8] right-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[20px] opacity-[.8] right-[20%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+
+            <div class="right-nav">
+            
+                <div class="nav-menus *:ml-4 *:cursor-pointer flex items-center">
+                    <a href="form.html">
+                        <button class="bg-slate-600 flex  min-w-[100px] shadow px-6 h-[40px] py-2 rounded  text-white font-medium justify-center items-center"> <i class="fas fa-notes-medical"></i> <span class="hidden pl-2 sm:inline"> Add Record</span></button>
+                
+                    </a>
+                    <p class="font-bold text-xl text-white"><span class="text-red-500 text-2xl">১</span> দফা</p>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="container  w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative   my-[5%]">
+        <div class="search-bar flex">
+            
+            <input type="text" name="query" class="px-4 h-[40px] md:w-2/3 w-full shadow py-2 outline-slate-400 rounded-4px rounded border mr-1" placeholder="search by anything" id="">
+            <button class="bg-slate-600 flex items-center min-w-[100px] shadow px-6 h-[40px] py-2 gap-1 rounded justify-center  text-white font-medium">
+                <i class="fas fa-magnifying-glass"></i> Search
+            </button> 
+            
+        </div>
+
+        <div class="criminals-list my-4 flex flex-wrap gap-[.5em] items-center justify-items-start">
+
+            <div class="criminal-card border w-[250px]  rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="viewcriminaldata.html">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+            <div class="criminal-card border w-[250px] rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
+                <a href="#">
+                    <div class="criminal-image h-[200px]">
+                        <img src="../images/criminal.png" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
+                    </div>
+                    <div class="criminal-details my-4 p-4">
+                        <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                        <p class="text-sm mb-1">
+                            <b>Crime location: </b>
+                        </p>
+                        <p class="crime-location text-sm">
+                            Uttara bir uttam avenue road near hamid masque.
+                        </p>
+                    </div>
+                    <a href="#" class="block mx-4 my-2 ">
+                        <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
+                        <i class="fas fa-folder"></i> Details
+                        </button>
+                    </a>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="w-90% m-auto my-[40px]">
+        <p class=" text-center font-semibold text-xs opacity-7">@Copyright all rights reserved to students of bangladesh - 2024</p>
+    </footer>
+    
+</body>
+</html>
