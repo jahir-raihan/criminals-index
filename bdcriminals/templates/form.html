@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../css/output.css">
-    <link rel="stylesheet" href="../css/raw_css.css">
+{% extends 'index.html' %}
+{% load static %}
+
+{% block css %}
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/42.0.2/ckeditor5.css">
-    <script src="../js/jquery.js"></script>
-    <title>New Crime Record</title>
-</head>
-<body>
+    <script src="{% static 'js/jquery.js' %}"></script>
+{% endblock css %}
 
+{% block title %}New Crime Record {% endblock title %}
 
+{% block header %}
     <header id="header" style="background:rgb(40 55 70)" class=" h-20">
-        <nav class="flex justify-between w-[90%] m-auto md-[11px] max-w-[1600px] h-[100%] items-center relative">
+        <nav class="flex justify-between w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative">
             <div class="left-nav relative">
                 <div class="logo relative">
                     <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-500"> Index</span></p>
@@ -50,7 +40,9 @@
 
         </nav>
     </header>
+{% endblock header %}
 
+{% block container %}
     <div class="w-full h-svh flex items-center justify-center hidden">
         <div>
             <p class="font-semibold text-green-600 text-center">Submitted Successfully !</p>
@@ -148,10 +140,10 @@
         </div>
     </div>  
 
-    <footer class="w-90% m-auto my-[40px]">
-        <p class=" text-center font-semibold text-xs opacity-7">@Copyright all rights reserved to students of bangladesh - 2024</p>
-    </footer>
+{% endblock container %}
 
+
+{% endblock script %}
     <script type="importmap">
         {
             "imports": {
@@ -160,7 +152,6 @@
             }
         }
     </script>
-
     <script type="module">
         import {
             ClassicEditor,
@@ -201,6 +192,5 @@
                 console.error( error );
             } );
     </script>
+{% endblock script %}
     
-</body>
-</html>
