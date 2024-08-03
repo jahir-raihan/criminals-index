@@ -1,5 +1,5 @@
 {% extends 'index.html' %}
-{% block title %} Criminal's name - Details {% endblock title %}
+{% block title %} {{criminal_details.criminal_name}} - Details {% endblock title %}
 
 {% block header %}
     <header id="header" style="background:rgb(40 55 70)" class=" h-20">
@@ -47,52 +47,60 @@
         <div class="criminal-details  lg:flex  gap-[2em]">
 
             <div class="left w-full lg:w-1/2">
-                <div style="background: rgb(78 93 113 / 45%)" class="img-container rounded-lg shadow hover:shadow-sm w-full border flex justify-center items-center py-4">
-                    <img src="../images/criminal.png" class="h-full">
+                <div style="background: rgb(78 93 113 / 45%);height:400px;"  class="img-container rounded-lg shadow hover:shadow-sm w-full border flex justify-center items-center p-4">
+                    <img src="{{criminal_details.default_image.url}}" class="h-full">
                 </div>
                 
             </div>
             
             <div class="right w-full my-[2em] lg:my-[0em] lg:w-1/2 border shadow hover:shadow-sm p-4 rounded-xl">
                 <p class="title mb-4 text-lg font-medium">Criminal Details</p>
-                <p class="name text-sm mb-1"><b>Name:</b> What's his name?</p>
+                <p class="name text-sm mb-1"><b>Name:</b> {{criminal_details.criminal_name}}</p>
                 <p class="text-sm mb-1">
                     <b>Crime location: </b>
                 </p>
                 <p class="crime-location text-sm">
-                    Uttara bir uttam avenue road near hamid masque.
+                    {{criminal_details.crime_location}}
                 </p>
 
                 <br>
-                <p class="name text-sm mb-1"><b>Social Links</b></p>
-                <p>Facebook</p>
-                <p>Instagram</p>
-                <p>LinkedIn</p>
-                <p>Twitter</p>
+                <p class="name text-sm mb-1"><b>Social Links:</b></p>
+                {{criminal_details.social_links|safe}}
             </div>
         </div>
 
         <div class="evidences my-[2em] bg-gray-200 border p-4 rounded-xl">
             <p class="title mb-4 text-lg font-bold">Evidences</p>
             <div class="evidence-container  flex flex-wrap gap-[1em]">
-                <div class="evidence-card w-[335px] flex justify-center p-4 rounded-xl shadow hover:shadow-lg items-center bg-gray-100">
-                    
-                    <img src="../images/criminal.png" class="h-[250px]" alt="">
 
-                </div>
+                {% for evidence in criminal_details.evidences.all %}
 
-                <div class="evidence-card w-[335px] flex justify-center p-4 rounded-xl shadow hover:shadow-lg items-center bg-gray-100">
-                    
-                    <video src="../videos/dummy_short_video3.mp4" controls class="h-fit w-full"></video>
+                    {% if evidence.is_video %}
+                        <div class="evidence-card w-[335px] flex justify-center p-4 rounded-xl shadow hover:shadow-lg items-center bg-gray-100">
 
-                </div>
+                            <video src="{{evidence.file.url}}" controls class="h-fit w-full"></video>
+
+                        </div>
+                    {% else %}
+                        <div class="evidence-card w-[335px] flex justify-center p-4 rounded-xl shadow hover:shadow-lg items-center bg-gray-100">
+                            <img src="{{evidence.file.url}}" class="h-[250px]" alt="">
+
+                        </div>
+                    {% endif %}
+
+                {% endfor %}
+
+
+
             </div>
 
         </div>
         
         <div class="more-details my-[2em] bg-gray-300 p-4 rounded-xl shadow hover:shadow-lg ">
             <p class="title mb-4 text-lg font-bold">Crime details</p>
-            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. A architecto consectetur, magnam praesentium accusamus fuga nesciunt suscipit. Molestiae perspiciatis illo eum cum! Sit optio beatae praesentium et quia qui quis, repellat sunt eveniet animi cum, recusandae corrupti tempora voluptatibus quae. Eligendi dignissimos optio molestiae expedita vel facere quo nisi architecto ducimus ratione maxime voluptates at beatae, fugiat ex voluptate qui rerum aut aliquid blanditiis tempora doloremque iste! Doloremque sequi sint illo accusamus, blanditiis molestias illum nihil dicta porro ducimus fugit ipsa autem sapiente cumque ea eaque iure quaerat dolores nostrum mollitia ratione perferendis suscipit quis amet? Eius velit consectetur, explicabo beatae eaque placeat et perferendis ipsa, cupiditate officia animi? Voluptatem minima soluta quod? Facere quibusdam sapiente illo ad pariatur cum nesciunt! Nihil vitae veniam dicta error magnam voluptatibus dolorem facere incidunt beatae aperiam expedita hic velit iure, voluptates doloribus laudantium suscipit ipsum cumque consequuntur, sint commodi similique rerum ad. Aspernatur tempora earum assumenda fugiat excepturi nam aut. Perspiciatis modi quisquam, fuga rerum aperiam id autem perferendis repellendus quia ratione nostrum quasi recusandae dignissimos cum cupiditate sunt earum tenetur dolor? Iste, expedita sequi! Esse suscipit accusamus magnam necessitatibus maxime aut iusto velit unde voluptatibus recusandae, omnis minima, voluptatem similique vel itaque.</p>
+            <div>
+                {{criminal_details.crime_details|safe}}
+            </div>
         </div>
     </div>
 

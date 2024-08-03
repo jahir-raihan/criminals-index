@@ -28,3 +28,26 @@ class CriminalsList(View):
             'criminals': criminals
         }
         return render(request, self.template_name, context)
+
+
+class CriminalsDetails(View):
+
+    """
+    View for criminal details with all evidences
+    """
+
+    template_name = 'viewcriminaldata.html'
+
+    def get(self, request, pk):
+
+        """
+        Get given primary key criminals details
+        """
+
+        criminal_details = Criminal.objects.filter(pk=pk).prefetch_related('evidences').first()
+        context = {
+            "criminal_details": criminal_details
+        }
+
+        return render(request, self.template_name, context)
+

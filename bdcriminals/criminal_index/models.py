@@ -14,7 +14,7 @@ class Criminal(models.Model):
 
 
 class Evidence(models.Model):
-    criminal = models.ForeignKey(Criminal, on_delete=models.CASCADE)
+    criminal = models.ForeignKey(Criminal, related_name='evidences', on_delete=models.CASCADE)
     file = models.FileField(upload_to='evidences/')
     is_video = models.BooleanField(default=False)
 

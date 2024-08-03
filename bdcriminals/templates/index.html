@@ -56,20 +56,23 @@
 
     {% block container %}
     <div class="container  w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative   my-[5%]">
-        <div class="search-bar flex">
-            
-            <input type="text" name="query" class="px-4 h-[40px] md:w-2/3 w-full shadow py-2 outline-slate-400 rounded-4px rounded border mr-1" placeholder="search by anything" id="">
-            <button class="bg-slate-600 flex items-center min-w-[100px] shadow px-6 h-[40px] py-2 gap-1 rounded justify-center  text-white font-medium">
-                <i class="fas fa-magnifying-glass"></i> Search
-            </button> 
-            
-        </div>
+
+        <form method="get">
+            <div class="search-bar flex">
+
+                <input type="text" value="{{request.GET.query}}" name="query" class="px-4 h-[40px] md:w-2/3 w-full shadow py-2 outline-slate-400 rounded-4px rounded border mr-1" placeholder="search by anything" id="">
+                <button type="submit" class="bg-slate-600 flex items-center min-w-[100px] shadow px-6 h-[40px] py-2 gap-1 rounded justify-center  text-white font-medium">
+                    <i class="fas fa-magnifying-glass"></i> Search
+                </button>
+
+            </div>
+        </form>
 
         <div class="criminals-list my-4 flex flex-wrap gap-[.5em] items-center justify-items-start">
 
             {% for criminal in criminals %}
                 <div class="criminal-card border w-[250px]  rounded bg-white shadow hover:shadow-xl hover:transition-shadow cursor-pointer">
-                    <a href="viewcriminaldata.html">
+                    <a href="{% url 'criminal_details' criminal.id %}">
                         <div class="criminal-image h-[200px]">
                             <img src="{{criminal.default_image.url}}" class="h-full rounded p-4 w-full bg-slate-600 object-contain" alt="">
                         </div>
@@ -82,7 +85,7 @@
                                 {{criminal.crime_location|truncatechars:50}}
                             </p>
                         </div>
-                        <a href="#" class="block mx-4 my-2 ">
+                        <a href="{% url 'criminal_details' criminal.id %}" class="block mx-4 my-2 ">
                             <button class="view-details bg-slate-600 px-6 py-2 rounded text-white font-medium w-full ">
                                 <i class="fas fa-folder"></i> Details
                             </button>
