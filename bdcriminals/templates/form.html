@@ -13,19 +13,21 @@
         <nav class="flex justify-between w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative">
             <div class="left-nav relative">
                 <div class="logo relative">
-                    <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-500"> Index</span></p>
+                     <a href="/">
+                        <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-400"> Index</span></p>
+                     </a>
                     <div class="blood absolute w-[15px] h-[15px] top-[30px] opacity-[.8] left-0 rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
                 </div>
-                <div class="blood z-10 absolute w-[25px] h-[25px] top-[40px]  left-[30%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
-                <div class="blood z-10 absolute w-[15px] h-[15px] top-[70px]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
-                <div class="blood z-10 absolute w-[20px] h-[20px] top-[110px] opacity-[.6]  left-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
-                <div class="blood z-10 absolute w-[30px] h-[30px] top-[70px]  opacity-[.5] left-[40%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
-                <div class="blood z-10 absolute w-[10px] h-[10px] top-[70px] opacity-]  left-[70%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[25px] h-[25px] top-[40px] left-[20%]  rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[15px] h-[15px] top-[70px]   left-[40%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[20px] h-[20px] top-[110px] opacity-[.6] left-[70%]  rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[30px] h-[30px] top-[70px]  opacity-[.5] left-[30%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
+                <div class="blood z-10 absolute w-[10px] h-[10px] top-[70px] opacity-] left-[20%]  rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
 
             </div>
-            <div class="blood absolute w-[25px] h-[25px] top-[30px] opacity-[.8] left-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
-            <div class="blood absolute w-[25px] h-[25px] top-[10px] opacity-[.8] right-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
-            <div class="blood absolute w-[25px] h-[25px] top-[20px] opacity-[.8] right-[20%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[30px] opacity-[.8] right-[30%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[10px] opacity-[.8] right-[20%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
+            <div class="blood absolute w-[25px] h-[25px] top-[20px] opacity-[.8] left-[30%]  rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
 
             <div class="right-nav">
             
@@ -76,30 +78,31 @@
             <div class="options  flex justify-center items-center w-full mt-8  rounded-[8px] shadow-[#000000]  m-auto ">
                 
                 <div class="w-full">
-                    <form method="post">
-          
+                    <form method="post" action="/create-record" enctype="multipart/form-data">
+
+                        {% csrf_token %}
                         <div class="input flex max-[650px]:block items-center justify-between *:block gap-3">
                             <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
-                                <label for="" class=" font-medium block mb-2">Criminal Name <span class="text-red-400">*</span></label>
-                                <input required type="text" placeholder="Criminal name" class=" outline-none border  h-[46px] rounded-[4px] p-2 w-full">
+                                <label class=" font-medium block mb-2">Criminal Name <span class="text-red-400">*</span></label>
+                                <input required type="text" name="criminal_name" placeholder="Criminal name" class=" outline-none border  h-[46px] rounded-[4px] p-2 w-full">
                             </div>
 
                             <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
-                                <label for="" class=" font-medium block mb-2">Crime Location & Time<span class="text-red-400">*</span></label>
-                                <input required type="text" placeholder="Crime location" class=" outline-none border h-[46px] rounded-[4px] p-2 w-full">
+                                <label  class=" font-medium block mb-2">Crime Location & Time<span class="text-red-400">*</span></label>
+                                <input required type="text" name="crime_location" placeholder="Crime location" class=" outline-none border h-[46px] rounded-[4px] p-2 w-full">
                             </div>
                             
                         </div>
 
                         <div class="input flex max-[650px]:block justify-between items-center w-full gap-3">
                             <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
-                                <label for="" class=" font-medium block mb-2">Criminal's Image <span class="text-red-400">*</span></label>
+                                <label class=" font-medium block mb-2">Criminal's Image <span class="text-red-400">*</span></label>
                                 <input required type="file" name="image" accept="file_extension|.jpg,.png,.jpeg" class="text-[#353a40] h-[46px] border p-2 rounded-[4px] w-full bg-white" placeholder="Full image of the vehicle">
                                 <div id="image_preview1"></div>
                             </div>
 
                             <div class="w-2/4 max-[650px]:w-full max-[650px]:mb-4">
-                                <label for="" class=" font-medium block mb-2">Criminal's - 1</label>
+                                <label  class=" font-medium block mb-2">Criminal's - 1</label>
                                 <input type="file" name="image" accept="file_extension|.jpg,.png,.jpeg" class="text-[#353a40] h-[46px] p-2 border  rounded-[4px] w-full bg-white">
                                 <div id="image_preview2"></div>
                             </div>
@@ -120,12 +123,29 @@
                         </div>
 
                         <div class="input w-full">
-                            <label for="" class=" font-medium block mb-2">Social Links <span class="text-red-400">*</span></label>
-                            <textarea name="social_links" id="social_links" id="" cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter your complaint note"></textarea>
+                            <label class=" font-medium block mb-2">Criminal Category <span class="text-red-400">*</span></label>
+                            <select required name="criminal_category"  class=" outline-none border  h-[46px] rounded-[4px] p-2 w-full">
+                                <option value="Student League">Student League</option>
+                                <option value="Police">Police</option>
+                                <option value="RAB">RAB</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Awami League Member">Awami League Member</option>
+                                <option value="Government official">Government officials</option>
+                                <option value="Awami League Associate">Awami League Associate</option>
+                                <option value="Indian Dalal">Indian Dalal</option>
+
+
+
+                            </select>
+                        </div>
+
+                        <div class="input w-full">
+                            <label for="social_links" class=" font-medium block mb-2">Social Links <span class="text-red-400"></span></label>
+                            <textarea name="social_links" id="social_links"  cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter your complaint note"></textarea>
                         </div>
                         <div class="input w-full">
-                            <label for="" class=" font-medium block mb-2">Crime Details <span class="text-red-400">*</span></label>
-                            <textarea required name="" id="crime_details" cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter crime details"></textarea>
+                            <label for="crime_details" class=" font-medium block mb-2">Crime Details <span class="text-red-400"></span></label>
+                            <textarea name="crime_details" id="crime_details" cols="30" rows="10" class="w-full max-h-[200px] max-w-[100%] border outline-none min-h-[100px] p-2 rounded-[4px]" placeholder="Enter crime details"></textarea>
                         </div>
 
                         <button type="submit" onsubmit="document.getElementById('submit-text').innerHTML='Submitting ...';" class="submit w-full bg-[#689095] h-[40px] my-[16px] rounded-[4px] text-white font-medium">
@@ -143,7 +163,7 @@
 {% endblock container %}
 
 
-{% endblock script %}
+{% block script %}
     <script type="importmap">
         {
             "imports": {

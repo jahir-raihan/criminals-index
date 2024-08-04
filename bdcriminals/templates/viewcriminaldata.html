@@ -6,7 +6,10 @@
         <nav class="flex justify-between w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative">
             <div class="left-nav relative">
                 <div class="logo relative">
-                    <p class="font-medium text-white text-2xl" > <span class="text-red-400">Criminals Index</span></p>
+                    <a href="/">
+                        <p class="font-medium text-white text-2xl" >Criminals <span class="text-red-400"> Index</span></p>
+                    </a>
+
                     <div class="blood absolute w-[15px] h-[15px] top-[30px] opacity-[.8] left-[10%] rounded-b-full rounded-r-full shadow-2xl shadow-white rotate-45 bg-red-600"></div>
                 </div>
                 <div class="blood z-10 absolute w-[25px] h-[25px] top-[40px]  right-[20%] rounded-b-full rounded-r-full shadow-2xl  rotate-45 bg-red-600"></div>
@@ -34,10 +37,12 @@
 
 {% block container %}
     <div class="w-[90%] m-auto max-w-[1600px] h-[100%] items-center relative   my-[2em]">
+        <a href="/">
 
-        <button class="bg-slate-600 px-6 py-2 rounded text-white font-medium w-[150px]" onclick="history.back()">
-            <i class="fas fa-arrow-left"></i> Back
-        </button>
+            <button class="bg-slate-600 px-6 py-2 rounded text-white font-medium w-[150px]" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </a>
     </div>
     
 
